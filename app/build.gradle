@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 10
+    compileSdkVersion 17
     buildToolsVersion "21.1.2"
     compileOptions.encoding = 'ISO-8859-2'
 
     defaultConfig {
         applicationId "com.wodu.gladoscontroller"
-        minSdkVersion 10
-        targetSdkVersion 10
+        minSdkVersion 17
+        targetSdkVersion 17
     }
 
     buildTypes {

@@ -98,7 +98,7 @@ implements SensorEventListener, RadioGroup.OnCheckedChangeListener {
     byte[] send_data = new byte[1024];
 
     /* We don't need updated gyro packet so often so send it every 5 sensor update */
-    private static final int TIME2SEND = TIME_CONSTANT * 5;
+    private static final int TIME2SEND = TIME_CONSTANT * 3;
     private int time2send;
     //byte[] receiveData = new byte[1024];
 	
@@ -131,7 +131,7 @@ implements SensorEventListener, RadioGroup.OnCheckedChangeListener {
 
         // GUI stuff
         mHandler = new Handler();
-        radioSelection = 1;
+        radioSelection = 2;
         d.setRoundingMode(RoundingMode.HALF_UP);
         d.setMaximumFractionDigits(3);
         d.setMinimumFractionDigits(3);
@@ -454,7 +454,7 @@ implements SensorEventListener, RadioGroup.OnCheckedChangeListener {
     public void client() throws IOException {
 
         DatagramSocket client_socket = new DatagramSocket(2362);
-        InetAddress IPAddress =  InetAddress.getByName("192.168.12.209");
+        InetAddress IPAddress =  InetAddress.getByName("192.168.4.1");
 
         str =
          "{" +
